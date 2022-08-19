@@ -12,7 +12,7 @@ exports.calculate = function(req, res) {
 
   // hallo mac
   var operations = {
-    'add':      function(a,b) { return a + b }, // add this tricky error caused by BAD programming ;)
+    'add':      function(a,b) { return +a + +b }, // add this tricky error caused by BAD programming ;)
     'subtract': function(a,b) { return a - b },
     'multiply': function(a,b) { return a * b },
     'divide':   function(a,b) { return a / b },
