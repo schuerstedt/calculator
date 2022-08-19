@@ -11,6 +11,6 @@ pool:
 
 steps:
 - script: |
-    docker run -v "$PWD":/usr/src/app node sh /usr/src/app/build.sh
+    docker run --rm node /bin/bash -c "cd usr/src; git clone https://github.com/schuerstedt/calculator; cd calculator; sh ./build.sh"
   displayName: 'npm install, build, and test in docker mit build.sh'    
 
