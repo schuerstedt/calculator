@@ -23,8 +23,7 @@ steps:
 
 
 - script: |
-    docker run hello-world
-#    docker run -it --rm --name my-running-script -v "$PWD":/usr/src/app node sh /usr/src/app/build.sh
+    docker run -v "$PWD":/usr/src/app node sh /usr/src/app/build.sh
   displayName: 'npm install, build, and test'    
 
 
