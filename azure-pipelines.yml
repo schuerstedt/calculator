@@ -23,10 +23,7 @@ steps:
 
 
 - script: |
-    npm install
-    npm run build
-    npm test
-    ls
+    docker run -it --rm --name my-running-script -v "$PWD":/usr/src/app node sh /usr/src/app/build.sh
   displayName: 'npm install, build, and test'    
 
 
