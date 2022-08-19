@@ -9,6 +9,8 @@ docker run -it --rm node sh
 docker run -it --rm --name my-running-script -v "$PWD":/usr/src/app node sh /usr/src/app/build.sh
 
 
+# clone, install, build and test inside of docker using build.sh script in repository
+docker run --rm node /bin/bash -c "cd usr/src; git clone https://github.com/schuerstedt/calculator; cd calculator; sh ./build.sh"
 
 
 
