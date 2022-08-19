@@ -1,1 +1,16 @@
 hallo
+
+
+docker run -it --rm --name my-running-script -v "$PWD":/usr/src/app -w /usr/src/app node:8 node your-daemon-or-script.js
+
+# testen wie es ausschaut 
+docker run -it --rm node sh
+
+docker run -it --rm --name my-running-script -v "$PWD":/usr/src/app node sh /usr/src/app/build.sh
+
+
+
+
+
+
+
