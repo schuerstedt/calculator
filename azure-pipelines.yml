@@ -15,6 +15,14 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+# Command line
+# Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
+- task: CmdLine@2
+  inputs:
+    script: 'ls -la' 
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
+
 - script: |
     npm install
     npm run build
